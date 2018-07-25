@@ -1,9 +1,8 @@
 FROM jakubsacha/symfony-docker:php5-dev
-#FROM bobey/docker-gitlab-ci-runner-php5.6
 
-RUN docker-php-ext-install bcmath mysqli
+RUN apt-get update && apt-get install -y zlib1g-dev
 
-RUN apt-get update
+RUN docker-php-ext-install bcmath mysqli zip
 
 RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
 
@@ -12,5 +11,3 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 RUN docker-php-ext-install gd
 
 RUN apt-get install unzip
-
-
