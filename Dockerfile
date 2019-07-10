@@ -1,6 +1,6 @@
 FROM epcallan/php7-testing-phpunit:7.2-phpunit7
 
-RUN echo "date.timezone = Europe/Warsaw" >> /etc/php/7.2/cli/php.ini
+RUN echo "date.timezone = Europe/Warsaw" >> $PHP_INI_DIR/php.ini
 
 RUN docker-php-ext-install -j$(nproc) intl
 
