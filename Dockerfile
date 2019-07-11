@@ -1,4 +1,4 @@
-FROM epcallan/php7-testing-phpunit:7.2-phpunit7
+FROM bctandoc/symfony-4-docker
 
 RUN echo "date.timezone = Europe/Warsaw" >> $PHP_INI_DIR/php.ini
 
