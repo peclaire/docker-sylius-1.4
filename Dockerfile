@@ -12,3 +12,4 @@ RUN docker-php-ext-install exif
 
 RUN docker-php-ext-install fileinfo
 
+RUN /bin/dd if=/dev/zero of=/var/swapfile bs=1M count=1024
